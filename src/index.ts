@@ -21,7 +21,7 @@ const server = http.createServer((req, res) => {
 
   // Forward the request to localhost:8069
   proxy.web(req, res, {
-    target: "http://localhost:8069",
+    target: "http://host.docker.internal:8069",
   });
 });
 
@@ -29,5 +29,5 @@ const server = http.createServer((req, res) => {
 const PORT = 3000;
 server.listen(PORT, () => {
   console.log(`Proxy server running on port ${PORT}`);
-  console.log(`Forwarding all requests to http://localhost:8069`);
+  console.log(`Forwarding all requests to port 8069`);
 });
