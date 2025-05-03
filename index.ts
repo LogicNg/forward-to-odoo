@@ -25,8 +25,8 @@ const server = http.createServer((req, res) => {
   });
 });
 
-// Listen on port 3857
-const PORT = 3857;
+// Listen on port 3000
+const PORT = 3000;
 server.listen(PORT, () => {
   console.log(`Proxy server running on port ${PORT}`);
   console.log(`Forwarding all requests to http://localhost:8069`);
