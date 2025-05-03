@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  },
   "dependencies": {
     "http-proxy": "^1.18.1"
   },
