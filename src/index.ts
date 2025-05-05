@@ -19,9 +19,8 @@ proxy.on("error", (err, req, res) => {
 const server = http.createServer((req, res) => {
   console.log(`Forwarding request: ${req.method} ${req.url}`);
 
-  // Forward the request to localhost:8069
   proxy.web(req, res, {
-    target: "http://localhost:8069",
+    target: "http://59.148.57.22:8969",
   });
 });
 
@@ -29,5 +28,4 @@ const server = http.createServer((req, res) => {
 const PORT = 3000;
 server.listen(PORT, () => {
   console.log(`Proxy server running on port ${PORT}`);
-  console.log(`Forwarding all requests to http://localhost:8069`);
 });
